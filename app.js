@@ -21,3 +21,5 @@ dice = Math.floor(Math.random() * 6) + 1; //created a random number
 //DOM manipulation in two ways
 document.querySelector('#current-' + activePlayer).textContent = dice; //textContent will only be manipulated only for text.active
 //document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>'; //textContent will only be manipulated only for text.active
+
+document.querySelector('.dice').style.display = 'none'; //
