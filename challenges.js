@@ -8,8 +8,8 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
 
     if (gamePlaying) {
         // 1. random number
-        let dice1 = Math.floor(Math.random() * 7) + 1;
-        let dice2 = Math.floor(Math.random() * 7) + 1;
+        let dice1 = Math.floor(Math.random() * 6) + 1;
+        let dice2 = Math.floor(Math.random() * 6) + 1;
 
         // 2. display the result
         document.getElementById('dice-1').style.display = 'block';
@@ -18,7 +18,7 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
         document.getElementById('dice-2').src = 'dice-' + dice2 + '.png';
 
         // 3. update the round score if the rolled number was not 1
-        if (dice1 !== 7 && dice2 !==7) {
+        if (dice1 !== 1 && dice2 !==1) {
             // add score
             roundScore += dice1 + dice2; //same as (roundScore = roundScore + dice;)
             document.querySelector('#current-' + activePlayer).textContent = roundScore;
@@ -57,6 +57,16 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
 
         //update the UI
         document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+
+        let input, winningScore;
+        input = document.querySelector('.final-score').value;
+        console.log(input);
+
+        if (input) {
+            winningScore = input;
+        } else {
+            winningScore = 100;
+        }
 
         //check if player won the game
         if (scores[activePlayer] >= 100) {
