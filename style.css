@@ -53,6 +53,7 @@ body {
     background-color: #fff;
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
     overflow: hidden;
+    border-radius: 5px;
 }
 
 .player-0-panel,
@@ -113,6 +114,7 @@ body {
     margin: 0 auto;
     padding: 12px;
     text-align: center;
+    
 }
 
 .player-current-label {
